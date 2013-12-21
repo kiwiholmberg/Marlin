@@ -1,19 +1,10 @@
+My settings are in the kossel branch. Project page is at <a href="http://kiwiholmberg.github.io/Marlin/">http://kiwiholmberg.github.io/Marlin/</a>.
+
+
+=============================================================
+
 A new beta version is avaiable.
 Look under the Marlin_v1 branch. We also made a tag that you can download.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 This firmware is a mashup between Sprinter, grbl and many original parts.
  (https://github.com/kliment/Sprinter)
