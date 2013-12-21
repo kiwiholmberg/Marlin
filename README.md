@@ -1,3 +1,7 @@
+These are my settings and <a href="http://kiwiholmberg.github.io/Marlin/">project page</a> for Kossel Mini.
+
+
+
 WARNING: 
 --------
 THIS IS RELEASE CANDIDATE 2 FOR MARLIN 1.0.0
