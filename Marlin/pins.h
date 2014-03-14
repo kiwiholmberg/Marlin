@@ -513,6 +513,10 @@
     #define KILL_PIN           -1
   #endif
 
+  #if defined(REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER_NO_LCD)
+    #define SDCARDDETECT 49
+  #endif
+
   #if MOTHERBOARD == 35
     #define HEATER_0_PIN       8
   #else
