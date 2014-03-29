@@ -439,6 +439,22 @@ void servo_init()
   #endif
 }
 
+void lights_update()
+{
+  #if defined(LED_LIGHTING) && (LED_LIGHTING_PIN > -1)
+    analogWrite(LED_LIGHTING_PIN, LED_LIGHTING);
+  #endif
+}
+
+void lights_init()
+{
+  #if defined(LED_LIGHTING) && (LED_LIGHTING_PIN > -1)
+    SERIAL_PROTOCOLLNPGM("Activating LED lights.");
+    SET_OUTPUT(LED_LIGHTING_PIN);
+    analogWrite(LED_LIGHTING_PIN, LED_LIGHTING);
+  #endif
+}
+
 void setup()
 {
   setup_killpin();
@@ -488,6 +504,7 @@ void setup()
   st_init();    // Initialize stepper, this enables interrupts!
   setup_photpin();
   servo_init();
+  lights_init(); //LED lighting
 
   lcd_init();
   _delay_ms(1000);	// wait 1sec to display the splash screen
@@ -547,6 +564,7 @@ void loop()
   manage_inactivity();
   checkHitEndstops();
   lcd_update();
+  lights_update();
 }
 
 void get_command()
@@ -1332,7 +1350,7 @@ void process_commands()
         destination[Z_AXIS]=current_position[Z_AXIS];
         current_position[Z_AXIS]+=retract_zlift;
         destination[E_AXIS]=current_position[E_AXIS];
-        current_position[E_AXIS]-=(retract_length+retract_recover_length)/volumetric_multiplier[active_extruder]; 
+        current_position[E_AXIS]-=(retract_length+retract_recover_length)/volumetric_multiplier[active_extruder];
         plan_set_e_position(current_position[E_AXIS]);
         float oldFeedrate = feedrate;
         feedrate=retract_recover_feedrate;

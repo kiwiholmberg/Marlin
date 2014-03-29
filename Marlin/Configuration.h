@@ -387,7 +387,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
   #define X_PROBE_OFFSET_FROM_EXTRUDER 0.0
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 0.0
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER 0.1  // Increase this if the first layer is too thin.
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER 0.15  // Increase this if the first layer is too thin.
 
   #define Z_RAISE_BEFORE_HOMING 4       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
@@ -454,7 +454,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
 
-#define MANUAL_Z_HOME_POS 260.3  // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 259.3  // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
@@ -515,7 +515,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 //#define ULTRA_LCD  //general LCD support, also 16x2
 //#define DOGLCD  // Support for SPI LCD 128x64 (Controller ST7565R graphic Display Family)
 #define SDSUPPORT // Enable SD Card Support in Hardware Console
-//#define SDSLOW // Use slower SD transfer mode (not normally needed - uncomment if you're getting volume init error)
+#define SDSLOW // Use slower SD transfer mode (not normally needed - uncomment if you're getting volume init error)
 //#define ENCODER_PULSES_PER_STEP 1 // Increase if you have a high resolution encoder
 //#define ENCODER_STEPS_PER_MENU_ITEM 5 // Set according to ENCODER_PULSES_PER_STEP or your liking
 //#define ULTIMAKERCONTROLLER //as available from the Ultimaker online store.
@@ -541,6 +541,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // ==> REMEMBER TO INSTALL U8glib to your ARDUINO library folder: http://code.google.com/p/u8glib/wiki/u8glib
 //#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER_NO_LCD //Same as above but LCD disabled and SD-reader functional.
+
+#define LED_LIGHTING 150 //Optional lighting. Strength of lights 0-255.
 
 // The RepRapWorld REPRAPWORLD_KEYPAD v1.1
 // http://reprapworld.com/?products_details&products_id=202&cPath=1591_1626

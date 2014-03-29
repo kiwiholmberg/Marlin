@@ -567,6 +567,10 @@
     #endif
   #endif
 
+  #ifdef LED_LIGHTING
+    #define LED_LIGHTING_PIN    8 //Lighting for printer instead of heated bed.
+  #endif
+
   #define TEMP_BED_PIN       14   // ANALOG NUMBERING
 
   #ifdef NUM_SERVOS
